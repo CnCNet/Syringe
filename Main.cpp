@@ -7,13 +7,14 @@
 #include <commctrl.h>
 
 int Run(std::string_view const arguments) {
-	constexpr auto const VersionString = "Syringe 0.7.2.0";
+	constexpr auto const VersionString = "Syringe 0.7.2.0 (modified)";
 
 	InitCommonControls();
 
 	Log::Open("syringe.log");
 
 	Log::WriteLine(VersionString);
+	Log::WriteLine("CnCNet Branch");
 	Log::WriteLine("===============");
 	Log::WriteLine();
 	Log::WriteLine("WinMain: arguments = \"%.*s\"", printable(arguments));
